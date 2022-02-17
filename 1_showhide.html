@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide</title>
+</head>
+
+<body>
+
+    <button class="btn-show">Click to Show</button>
+    <button class="btn-hide">Click to Hide</button>
+    <button class="btn-toggle">Click to Toggle</button>
+    <h1 class="page-header">This is a test</h1>
+    <div id="block"></div>
+
+
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+
+        const Showbtn = $(".btn-show");
+        const Hidebtn = $(".btn-hide");
+        const Togglebtn = $(".btn-toggle");
+        const h1 = $(".page-header");
+
+        // click to show and hide Text
+        Showbtn.click(() => h1.show());
+        Hidebtn.click(() => h1.hide());
+        Togglebtn.click(() => h1.toggle());
+    </script>
+</body>
+        
+</html>

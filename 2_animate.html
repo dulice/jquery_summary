@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #block {
+            width: 300px;
+            height: 100px;
+            background-color: rgb(155, 119, 196);
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn-show">Click to Show</button>
+    <button class="btn-hide">Click to Hide</button>
+    <button class="btn-toggle">Click to Toggle</button>
+    <h1 class="page-header">This is a test</h1>
+    <div id="block"></div>
+
+
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+
+        const Showbtn = $(".btn-show");
+        const Hidebtn = $(".btn-hide");
+        const Togglebtn = $(".btn-toggle");
+        const h1 = $(".page-header");
+        const block = $("#block");
+
+        // animate text
+
+        // fade animate
+        // Showbtn.click(() => h1.fadeIn());
+        // Hidebtn.click(() => h1.fadeOut());
+        // Togglebtn.click(() => h1.fadeToggle());
+
+        // slide animate
+        Showbtn.click(() => block.slideDown(1000));
+        Hidebtn.click(() => block.slideUp());
+        Togglebtn.click(() => block.slideToggle());
+
+        // customize animate
+        //  Showbtn.click(() => block.animate({
+        //      opacity: "0.5",
+        //      height: "toggle"
+        //  }, 1000))
+    </script>
+</body>
+</html>
+
+<!-- can add param in method "1000" means delay -->
+

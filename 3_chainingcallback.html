@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Chaningin Callbacks</title>
+    <style>
+        #block {
+            width: 300px;
+            height: 100px;
+            background-color: rgb(155, 119, 196);
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn-show">Click to Change</button>
+    <button class="btn-hide">Click to Animate</button>
+    <button class="btn-toggle">Click to Stop</button>
+    <div id="block"></div>
+    <h1 class="page-header">This is a test</h1>
+
+
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+
+        const Showbtn = $(".btn-show");
+        const Hidebtn = $(".btn-hide");
+        const Togglebtn = $(".btn-toggle");
+        const h1 = $(".page-header");
+        const block = $("#block");
+
+        // stop chaining callbacks
+        Showbtn.click(() => h1.fadeOut(1000).fadeIn(1000).fadeOut(1000).slideDown(2000).css("color", "green"));
+        Hidebtn.click(() => block.animate({
+            left: "+=50px",
+            top: "+=50px",
+        }, 1000));
+        Togglebtn.click(() => block.stop());
+
+    </script>
+</body>
+
+</html>

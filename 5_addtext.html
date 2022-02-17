@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Text</title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p>append and prepend used to update the text inside their parent element.</p>
+    <p>Before and after used to update the text with their sibling element.</p>
+
+    <ul id="ul">
+        <li>Blue</li>
+        <li>Blue</li>
+        <li>Green</li>
+    </ul>
+
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+
+        $("#ul").append(`<li>Append Text</li>`);
+        $("#ul").prepend(`<li>Prepend Text</li>`);
+        $("#ul").before(`<h2>Before Text</h2>`);
+        $("#ul").after(`<h2>After Text</h2>`);
+
+    </script>
+</body>
+
+</html>
